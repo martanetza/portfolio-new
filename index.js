@@ -81,8 +81,8 @@ function showPuzzel() {
       });
 
       elem.addEventListener("mouseover", function(n) {
-        document.querySelector(".main-wrapper-about-area1 img ").style.display =
-          "none";
+        // document.querySelector(".main-wrapper-about-area1 img ").style.display =
+        //   "none";
         document.querySelector("#text-" + i).classList.add("text-1a");
         //  document.querySelector('#cls-'+i).classList.remove('cls-'+i);
         document.querySelector("#cls-" + i).classList.add("cls-1a");
@@ -90,8 +90,8 @@ function showPuzzel() {
     });
     puzzelAll[i].forEach(function(elem) {
       elem.addEventListener("mouseout", function() {
-        document.querySelector(".main-wrapper-about-area1 img ").style.display =
-          "block";
+        // document.querySelector(".main-wrapper-about-area1 img ").style.display =
+        //   "block";
         document.querySelector("#text-" + i).classList.remove("text-1a");
         document.querySelector("#cls-" + i).classList.remove("cls-1a");
         document.querySelector("#cls-" + i).classList.add("cls-" + i);
