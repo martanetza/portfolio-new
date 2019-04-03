@@ -1,0 +1,87 @@
+.main-wrapper-index-area1 #puzzel_1 {
+  /* display: block; */
+  width: 450px;
+  /* margin: 20% auto auto 10%; */
+  top: 70px;
+  left: 20px;
+  transform: rotate(15deg);
+  position: absolute;
+  z-index: 0;
+}
+
+.main-wrapper-index-area1 #puzzel_1a,
+.main-wrapper-index-area1 #puzzel_1c {
+  display: none;
+  width: 485px;
+  /* margin: 20% auto auto 10%; */
+  top: 70px;
+  left: 5px;
+  transform: rotate(15deg);
+  position: absolute;
+  z-index: 0;
+}
+.main-wrapper-index-area1 #puzzel_1b {
+  display: none;
+  width: 235px;
+  /* margin: 20% auto auto 10%; */
+  top: 210px;
+  left: 85px;
+
+  transform: rotate(15deg);
+  position: absolute;
+  z-index: 0;
+}
+
+.main-wrapper-index-area1 #puzzel_2 {
+  /* display: block; */
+  width: 242px;
+
+  /* margin: 20% auto auto 10%; */
+  position: absolute;
+  z-index: 1;
+  top: 345px;
+  left: 210px;
+}
+
+/* .main-wrapper-index-area1 #puzzel_2:hover {
+    transform: rotate(15deg);
+    top: 322px;
+    left: 210px;
+  } */
+
+.puzzleAnimate1 {
+  animation-name: animation1;
+  animation-duration: 0.5s;
+  animation-delay: -2s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animation1 {
+  from {
+    top: 345px;
+    left: 210px;
+  }
+  to {
+    transform: rotate(15deg);
+    top: 322px;
+    left: 210px;
+  }
+}
+.puzzleAnimate2 {
+  animation-name: animation2;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animation2 {
+  from {
+    top: 210px;
+    left: 85px;
+  }
+  to {
+    /* transform: rotate(15deg); */
+    top: -310px;
+    left: 885px;
+  }
+}
