@@ -848,7 +848,7 @@ text {
 
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     width: 70vw;
     margin: 20px auto;
   }
