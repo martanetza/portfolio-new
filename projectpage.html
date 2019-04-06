@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-wrapper">
+        <div class="header-area-1">
+          <a href="#indexSection">marta netza</a>
+        </div>
+        <div class="header-area-2">
+          <a id="nav-portfolio" href="index.html/#portfolioSection"
+            >portfolio</a
+          >
+          <a id="nav-about" href="#aboutSection">about</a>
+          <a id="nav-contact" href="#contactSection">contact</a>
+        </div>
+        <div class="nav-icon3" id="nav-icon3">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+    <section id="projectSection" class="projectSection">
+      <div class="projectSection-area0">
+        <button class="closeModal">close</button>
+      </div>
+
+      <div class="projectSection-area1">
+        <h1>Title</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
+          eligendi dolore reprehenderit nihil autem quaerat ab. Ratione odit,
+          aliquid nesciunt in nulla aliquam vel obcaecati, quis, quod iure ab
+          error. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit
+          eligendi dolore reprehenderit nihil autem quaerat ab. Ratione odit,
+          aliquid nesciunt in nulla aliquam vel obcaecati, quis, quod iure ab
+          error.
+        </p>
+        <button>see the project</button>
+      </div>
+      <div class="projectSection-area2">
+        <div class="container">
+          <div class="mySlides">
+            <div class="numbertext">1 / 6</div>
+            <img src="img/Asset 1.png" style="width:100%" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img src="img/Capture_desktop MD.PNG" style="width:100%" />
+          </div>
+          <div class="mySlides">
+            <div class="numbertext">2 / 6</div>
+            <img src="img/We-bike_small.png" style="width:100%" />
+          </div>
+
+          <a class="prev" onclick="plusSlides(-1)">❮</a>
+          <a class="next" onclick="plusSlides(1)">❯</a>
+
+          <div class="row">
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="img/Asset 1.png"
+                style="width:100%"
+                onclick="currentSlide(1)"
+                alt="The Woods"
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="img/Capture_desktop MD.PNG"
+                style="width:100%"
+                onclick="currentSlide(2)"
+                alt="Cinque Terre"
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="img/We-bike_small.png"
+                style="width:100%"
+                onclick="currentSlide(3)"
+                alt="Mountains and fjords"
+              />
+            </div>
+          </div>
+        </div>
+
+        <script>
+          var slideIndex = 1;
+          showSlides(slideIndex);
+
+          function plusSlides(n) {
+            showSlides((slideIndex += n));
+          }
+
+          function currentSlide(n) {
+            showSlides((slideIndex = n));
+          }
+
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("demo");
+            var captionText = document.getElementById("caption");
+            if (n > slides.length) {
+              slideIndex = 1;
+            }
+            if (n < 1) {
+              slideIndex = slides.length;
+            }
+            for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
+          }
+        </script>
+      </div>
+    </section>
+  </body>
+</html>

@@ -1,4 +1,20 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
+@font-face {
+  font-family: "BrandonGrotesque-Black";
+  src: url(fonts/BrandonGrotesque-Black.ttf);
+  font-weight: bolder;
+}
+@font-face {
+  font-family: "BrandonGrotesque-Bold";
+  src: url(fonts/BrandonGrotesque-Bold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: "BrandonGrotesque-Regular";
+  src: url(fonts/BrandonGrotesque-Regular.ttf);
+  font-weight: 400;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -14,7 +30,7 @@ a {
 
 body {
   background-color: #f5f6f7;
-  font-family: "Open Sans";
+  font-family: "open sans";
   overflow-x: hidden;
 }
 
@@ -27,11 +43,12 @@ header {
   background-color: #022b3a;
   width: 100vw;
   height: auto;
-  font-weight: 500;
+  /* font-weight: 500; */
   font-size: 1.3em;
 }
 
 .header-wrapper {
+  font-family: "BrandonGrotesque-Regular";
   width: 80vw;
   margin: 0px auto;
   display: grid;
@@ -40,7 +57,7 @@ header {
   grid-template-areas: "area1 area2" "area3 area3";
   color: white;
   height: 8vh;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .header-area-1 {
@@ -481,24 +498,16 @@ animation-fill-mode: forwards;
 }
 
 .main-wrapper-about-area1 {
-  position: relative;
   width: 100%;
 }
 .main-wrapper-about-area2 {
   width: 100%;
-  font-size: 22px;
-  color: #235789;
+  /* font-size: 22px;
+  color: #235789; */
 }
-.main-wrapper-about-area1 img {
+.main-wrapper-about img {
   display: block;
-  width: 8%;
-  position: absolute;
-  z-index: 1;
-  top: 88%;
-  left: 88%;
-  animation: movePointer 5s linear infinite;
-  /* transform: rotate(400deg); */
-  /* animation-iteration-count: 2, 0, infinite; */
+  width: 100%;
 }
 
 @keyframes movePointer {
@@ -591,7 +600,7 @@ text {
   }
 
   .header-wrapper {
-    width: 80vw;
+    width: 70vw;
     margin: 0px auto;
     display: grid;
     grid-template-columns: auto auto;
@@ -599,7 +608,7 @@ text {
     grid-template-areas: "area1 area2" "area3 area3";
     color: white;
     height: 8vh;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
   /*------------------------ about desktop----------------------------- */
   .aboutSection {
@@ -608,26 +617,45 @@ text {
   .main-wrapper-about {
     display: flex;
     flex-direction: row;
-    width: 80vw;
+    flex-wrap: wrap;
+    width: 70vw;
     margin: 50px auto;
+    justify-content: space-between;
+  }
+  .main-wrapper-about h5 {
+    font-size: 1.2em;
   }
 
-  .main-wrapper-about-area1 {
+  .main-wrapper-about h2 {
+    width: 100%;
+    font-family: "BrandonGrotesque-Regular";
+    font-size: 3em;
+    text-align: center;
+    color: #022b3a;
+    margin-top: 0px;
+  }
+  .main-wrapper-about p {
+    font-size: 1.2em;
+  }
+
+  .main-wrapper-about-area1,
+  .main-wrapper-about-area2,
+  .main-wrapper-about-area3,
+  .main-wrapper-about-area4,
+  .main-wrapper-about-area5,
+  .main-wrapper-about-area6 {
     position: relative;
     width: 50%;
+    margin: 100px auto;
+    color: #235789;
+    display: flex;
+    flex-direction: column;
   }
-  .main-wrapper-about-area1 img {
+  .main-wrapper-about img {
     display: block;
-    width: 8%;
-    position: absolute;
-    z-index: 1;
-    top: 88%;
-    left: 88%;
-    animation: movePointer 5s linear infinite;
-    /* transform: rotate(400deg); */
-    /* animation-iteration-count: 2, 0, infinite; */
+    width: 50%;
+    margin: auto;
   }
-
   @keyframes movePointer {
     0% {
       transform: rotate(0deg);
@@ -640,12 +668,12 @@ text {
       transform: rotate(-360deg);
     }
   }
-  .main-wrapper-about-area2 {
+  /* .main-wrapper-about-area2 {
     width: 50%;
     margin: 50px;
     font-size: 22px;
     color: #235789;
-  }
+  } */
   /*------------------------ index desktop----------------------------- */
 
   .main-wrapper-index {
@@ -821,7 +849,7 @@ text {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    width: 80vw;
+    width: 70vw;
     margin: 20px auto;
   }
 
@@ -925,5 +953,136 @@ text {
   }
   .wrapper-contact-area2 {
     width: 50%;
+  }
+  /*------------------------ project desktop----------------------------- */
+
+  #projectSection {
+    width: 70vw;
+    height: 65vh;
+    margin: auto;
+    margin-top: 20vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 30px 0px;
+  }
+  .closeModal {
+    margin: auto 3% 3% auto;
+    display: block;
+  }
+  .projectSection-area0 {
+    width: 100%;
+  }
+  .projectSection-area1 {
+    width: 45%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .projectSection-area1 button {
+    display: block;
+    width: 50%;
+    margin: auto;
+    margin-right: 0px;
+    margin-bottom: 0px;
+  }
+
+  .projectSection-area2 {
+    width: 45%;
+    height: 80%;
+  }
+
+  .projectSection > * {
+    box-sizing: border-box;
+  }
+
+  .projectSection img {
+    vertical-align: middle;
+  }
+
+  /* Position the image container (needed to position the left and right arrows) */
+  .container {
+    position: relative;
+  }
+
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  /* Add a pointer when hovering over the thumbnail images */
+  .projectSection .cursor {
+    cursor: pointer;
+  }
+
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color: #222;
+    padding: 2px 16px;
+    color: white;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 33.33%;
+  }
+
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.6;
+  }
+
+  .projectSection .active,
+  .projectSection .demo:hover {
+    opacity: 1;
   }
 }
