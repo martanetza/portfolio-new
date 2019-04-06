@@ -619,7 +619,7 @@ text {
     flex-direction: row;
     flex-wrap: wrap;
     width: 70vw;
-    margin: 50px auto;
+    margin: 0px auto;
     justify-content: space-between;
   }
   .main-wrapper-about h5 {
@@ -629,10 +629,10 @@ text {
   .main-wrapper-about h2 {
     width: 100%;
     font-family: "BrandonGrotesque-Regular";
-    font-size: 3em;
+    font-size: 2.5em;
     text-align: center;
     color: #022b3a;
-    margin-top: 0px;
+    margin-top: 20px;
   }
   .main-wrapper-about p {
     font-size: 1.2em;
@@ -645,17 +645,29 @@ text {
   .main-wrapper-about-area5,
   .main-wrapper-about-area6 {
     position: relative;
-    width: 50%;
-    margin: 100px auto;
+    width: 45%;
+    margin: 30px auto;
     color: #235789;
     display: flex;
     flex-direction: column;
   }
+
   .main-wrapper-about img {
     display: block;
     width: 50%;
     margin: auto;
   }
+
+  .main-wrapper-about-area1 img {
+    margin-left: 0px;
+  }
+  .main-wrapper-about-area4 img {
+    margin-right: 0px;
+  }
+  .main-wrapper-about-area5 img {
+    margin-left: 0px;
+  }
+
   @keyframes movePointer {
     0% {
       transform: rotate(0deg);
@@ -891,6 +903,14 @@ text {
 
     overflow: hidden;
     margin: 20px auto;
+  }
+
+  .portfolio-wrapper p {
+    font-size: 0.8em;
+  }
+
+  .portfolio-wrapper h1 {
+    font-size: 1em;
   }
   /*------------------------ contact desktop----------------------------- */
 
