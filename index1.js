@@ -2,7 +2,7 @@ window.addEventListener("load", rocketStart);
 setTimeout(rocketStart, 5000);
 
 document.querySelector("#puzzel_2").addEventListener("mouseover", rocketStart);
-document.querySelector("#puzzel_2").addEventListener("touchend", rocketStart);
+document.querySelector("#puzzel_2").addEventListener("touchstart", rocketStart);
 function rocketStart() {
   document.querySelector("#puzzel_2").classList.add("puzzleAnimate1");
   document.querySelector("#puzzel_2").addEventListener("animationend", () => {
