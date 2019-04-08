@@ -507,12 +507,43 @@ textarea::placeholder {
   background: #f5f6f7;
 }
 .main-wrapper-about {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas:
+    "area1"
+    "area2"
+    "area3"
+    "area4"
+    "area6"
+    "area5"
+    "area7"
+    "area8";
   width: 80vw;
   margin: 50px auto;
 }
-
+.main-wrapper-about h2:first-child {
+  grid-area: area1;
+}
+.main-wrapper-about-area1 {
+  grid-area: area2;
+}
+.main-wrapper-about-area2 {
+  grid-area: area3;
+}
+.main-wrapper-about h2:nth-child(4) {
+  grid-area: area4;
+}
+.main-wrapper-about-area3 {
+  grid-area: area5;
+}
+.main-wrapper-about-area4 {
+  grid-area: area6;
+}
+.main-wrapper-about-area5 {
+  grid-area: area7;
+}
+.main-wrapper-about-area6 {
+  grid-area: area8;
+}
 .main-wrapper-about-area1 {
   width: 100%;
 }
