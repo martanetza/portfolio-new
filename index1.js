@@ -1,32 +1,27 @@
-if (window.innerWidth > 991) {
-  // window.addEventListener("load", rocketStart);
+window.addEventListener("load", rocketStart);
+setTimeout(rocketStart, 5000);
 
-  setTimeout(rocketStart, 5000);
-
-  document
-    .querySelector("#puzzel_2")
-    .addEventListener("mouseover", rocketStart);
-  function rocketStart() {
-    document.querySelector("#puzzel_2").classList.add("puzzleAnimate1");
-    document.querySelector("#puzzel_2").addEventListener("animationend", () => {
-      console.log("test");
-      document.querySelector("#puzzel_2").style.display = "none";
-      document.querySelector("#puzzel_1").style.display = "none";
-      document
-        .querySelector(".main-wrapper-index-area1 #puzzel_1b")
-        .classList.add("puzzleAnimate2");
-    });
-    document
-      .querySelectorAll(
-        ".main-wrapper-index-area1 #puzzel_1a, .main-wrapper-index-area1 #puzzel_1b, .main-wrapper-index-area1 #puzzel_1c "
-      )
-      .forEach(e => {
-        e.style.display = "block";
-      });
+document.querySelector("#puzzel_2").addEventListener("mouseover", rocketStart);
+function rocketStart() {
+  document.querySelector("#puzzel_2").classList.add("puzzleAnimate1");
+  document.querySelector("#puzzel_2").addEventListener("animationend", () => {
+    console.log("test");
+    document.querySelector("#puzzel_2").style.display = "none";
+    document.querySelector("#puzzel_1").style.display = "none";
     document
       .querySelector(".main-wrapper-index-area1 #puzzel_1b")
-      .addEventListener("animationend", restart);
-  }
+      .classList.add("puzzleAnimate2");
+  });
+  document
+    .querySelectorAll(
+      ".main-wrapper-index-area1 #puzzel_1a, .main-wrapper-index-area1 #puzzel_1b, .main-wrapper-index-area1 #puzzel_1c "
+    )
+    .forEach(e => {
+      e.style.display = "block";
+    });
+  document
+    .querySelector(".main-wrapper-index-area1 #puzzel_1b")
+    .addEventListener("animationend", restart);
 }
 
 console.log("window", window.innerWidth);
@@ -68,11 +63,35 @@ function showData(e) {
 
   copy.querySelector("h1").textContent = e.title;
   copy.querySelector("p").textContent = e.short_description;
-
-  // copy.querySelector("button").addEventListener("click", () => {
-  //   event.target.parentElement.parentElement.remove();
-  //   remove(e._id);
-  //  });
+  copy.querySelector("button").dataset.id = e._id;
+  copy.querySelector("button").addEventListener("click", event => {
+    console.log(event.target.dataset.id);
+    window.location.href = "#projectSection";
+    document.querySelector(".projectSection").classList.add("show");
+    document.querySelector(".portfolioSection").classList.add("hide");
+    if ((event.target.dataset.id = e._id)) {
+      document.querySelector(".projectSection h1").textContent = e.title;
+      document.querySelector(".projectSection p").textContent =
+        e.long_description;
+      document.querySelector(".container div:nth-child(1) img").src =
+        "https://cartoon-0a3f.restdb.io/media/" + e.IMG[0];
+      document.querySelector(".container div:nth-child(2) img").src =
+        "https://cartoon-0a3f.restdb.io/media/" + e.IMG[1];
+      document.querySelector(".container div:nth-child(3) img").src =
+        "https://cartoon-0a3f.restdb.io/media/" + e.IMG[2];
+      document.querySelector(".row div:nth-child(1) img").src =
+        "https://cartoon-0a3f.restdb.io/media/" + e.IMG[0];
+      document.querySelector(".row div:nth-child(2) img").src =
+        "https://cartoon-0a3f.restdb.io/media/" + e.IMG[1];
+      document.querySelector(".row div:nth-child(3) img").src =
+        "https://cartoon-0a3f.restdb.io/media/" + e.IMG[2];
+    }
+    document.querySelector(".closeModal").addEventListener("click", event => {
+      document.querySelector(".projectSection").classList.add("hide");
+      document.querySelector(".projectSection").classList.remove("show");
+      document.querySelector(".portfolioSection").classList.remove("hide");
+    });
+  });
 
   document.querySelector(".portfolio-wrapper").appendChild(copy);
 }
@@ -148,3 +167,5 @@ document.querySelector("#nav-icon3").addEventListener("click", () => {
     );
   }
 });
+
+console.log(document.querySelector("#puzzel_1").offsetHeight);

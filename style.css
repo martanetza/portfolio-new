@@ -49,7 +49,7 @@ header {
 
 .header-wrapper {
   font-family: "BrandonGrotesque-Regular";
-  width: 80vw;
+  width: 90vw;
   margin: 0px auto;
   display: grid;
   grid-template-columns: auto auto;
@@ -214,16 +214,13 @@ header {
 }
 
 .main-wrapper-index {
-  height: 100vh;
-  width: 80vw;
+  width: 100vw;
   margin-top: 0px;
   color: white;
   display: flex;
   flex-direction: column;
 }
-.scale {
-  transform: scale(0.7);
-}
+
 main {
   margin-top: 50px;
   display: flex;
@@ -234,15 +231,16 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  margin: 50px;
-  font-size: 22px;
+  width: 90%;
+  margin: 10px auto;
   color: white;
+  text-align: right;
 }
 
 .main-wrapper-index-area1 {
-  width: 100vw;
-  min-height: 20vh;
+  /* width: 100vw; */
+  min-height: 40vh;
+
   position: relative;
   margin-left: 20%;
   margin-top: 10%;
@@ -250,12 +248,20 @@ main {
   margin-bottom: 20%;
 }
 
+.main-wrapper-index-area1 {
+  /* grid-area: area1 */
+  width: 50vw;
+  position: relative;
+  margin-left: 0%;
+  margin-top: 0%;
+}
+
 .main-wrapper-index-area1 #puzzel_1 {
-  /* display: block; */
-  width: 60vw;
+  display: block;
+  width: 50vmin;
   /* margin: 20% auto auto 10%; */
-  top: 7vw;
-  left: 2vw;
+  top: 27vmin;
+  left: 22vmin;
   transform: rotate(15deg);
   position: absolute;
   z-index: 0;
@@ -265,21 +271,21 @@ main {
 .main-wrapper-index-area1 #puzzel_1a,
 .main-wrapper-index-area1 #puzzel_1c {
   display: none;
-  width: 32.3vw;
+  width: 54.1vmin;
   /* margin: 20% auto auto 10%; */
-  top: 7.1vw;
-  left: 1vw;
+  top: 27vmin;
+  left: 20vmin;
   transform: rotate(15deg);
   position: absolute;
   z-index: 0;
 }
 .main-wrapper-index-area1 #puzzel_1b {
   display: none;
-  width: 16vw;
+  width: 27vmin;
   /* margin: 20% auto auto 10%; */
-  top: 16.2vw;
-  left: 6.1vw;
-
+  top: 42.1vmin;
+  left: 28.9vmin;
+  /* opacity: 0.2; */
   transform: rotate(15deg);
   position: absolute;
   z-index: 0;
@@ -287,40 +293,25 @@ main {
 
 .main-wrapper-index-area1 #puzzel_2 {
   /* display: block; */
-  width: 32.3vw;
+  width: 28.1vmin;
   position: absolute;
   z-index: 1;
-  /* top: 40.6vw;
-  left: 27.4vw;
+  top: 55vmin;
+  left: 47vmin;
+  /* top: 55.1vmin;
+  left: 43vmin;
   transform: rotate(15deg); */
-  top: 40.6vw;
-  left: 32vw;
 }
-
-/* .main-wrapper-index-area1 #puzzel_2:hover {
-transform: rotate(15deg);
-top: 322px;
-left: 210px;
-} */
-/* 
-.main-wrapper-index-area1 #puzzel_2:hover {
-animation-name: animation1;
-animation-duration: 0.5s;
-animation-delay: -2s;
-animation-timing-function: ease-in;
-animation-fill-mode: forwards;
-} */
 
 @keyframes animation1 {
   from {
-    top: 32vw;
-    left: 21vw;
+    top: 52vmin;
+    left: 21vmin;
   }
   to {
+    top: 55.1vmin;
+    left: 43vmin;
     transform: rotate(15deg);
-
-    top: 23.85vw;
-    left: 14.66vw;
   }
 }
 
@@ -340,8 +331,8 @@ animation-fill-mode: forwards;
 
 @keyframes animation2 {
   from {
-    top: 16.2vw;
-    left: 6.1vw;
+    top: 42.1vmin;
+    left: 28.9vmin;
   }
   to {
     /* transform: rotate(15deg); */
@@ -410,7 +401,7 @@ animation-fill-mode: forwards;
   scroll-snap-type: y mandatory;
 
   background: #235789;
-  color: black;
+  color: white;
 }
 
 .wrapper-contact {
@@ -440,6 +431,8 @@ animation-fill-mode: forwards;
 
 .wrapper-contact-area1 h1 {
   text-align: center;
+  font-family: "BrandonGrotesque-Regular";
+  letter-spacing: 3px;
 }
 
 .someLinks img {
@@ -486,6 +479,29 @@ animation-fill-mode: forwards;
   grid-area: area1;
   width: 100%;
 }
+
+input {
+  display: block;
+  width: 100%;
+  margin: 30px auto;
+  height: 40px;
+  background: #022b3a;
+  border: none;
+  color: white;
+}
+textarea {
+  max-width: 100%;
+  min-width: 100%;
+  background: #022b3a;
+  height: 50%;
+  border: none;
+}
+input::placeholder,
+textarea::placeholder {
+  color: white;
+  font-size: 1.2em;
+  padding: 5px;
+}
 /*------------------------ about ---------------------------- */
 .aboutSection {
   background: #f5f6f7;
@@ -507,79 +523,32 @@ animation-fill-mode: forwards;
 }
 .main-wrapper-about img {
   display: block;
-  width: 100%;
+  width: 50%;
+  margin: auto;
 }
-
-@keyframes movePointer {
-  0% {
-    transform: rotate(0deg);
-  }
-  20% {
-    transform: rotate(-360deg);
+@media all and (min-width: 600px) {
+  .main-wrapper-index {
+    display: flex;
+    flex-direction: row;
   }
 
-  100% {
-    transform: rotate(-360deg);
+  .main-wrapper-index h1 {
+    font-size: 1em;
   }
-}
 
-#about-details {
-  display: none;
-}
-.boxAbout {
-  display: none;
-}
-.cls-0,
-.cls-1,
-.cls-2,
-.cls-3 {
-  fill: transparent;
-  stroke: white;
-  stroke-miterlimit: 10;
-  stroke-width: 2px;
-  cursor: pointer;
-}
-.cls-1a {
-  fill: #f5f6f7;
-  transition: all 1s;
-}
-.cls-1aa {
-  fill: #f5f6f7;
-  transition: all 1s;
-}
-/*
-.cls-1:hover,
-.cls-2:hover,
-.cls-3:hover,
-.cls-4:hover{
-  fill: #F5F6F7;
-} */
+  .main-wrapper-index-area2 {
+    width: 50%;
+  }
+  .main-wrapper-index p {
+    font-size: 0.5em;
+  }
 
-#Layer_1 {
-  width: 100%;
-  background-image: url(ilustracja_portfolio_2c.png);
-  background-size: cover;
-  background-position: center;
-}
-
-text {
-  fill: transparent;
-  cursor: pointer;
-}
-
-.text-1a {
-  fill: #235789;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  font-weight: bolder;
-  transition: fill 3s;
-}
-.text-1aa {
-  fill: #235789;
-  font-size: 1.2em;
-  text-transform: uppercase;
-  font-weight: bolder;
-  transition: fill 3s;
+  .boxPortfolio {
+    height: 100vh;
+  }
+  .portfolio-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
 }
 
 /* ---------------------------------------------------------DESKTOP-------------------------------------------------------------- */
@@ -657,7 +626,6 @@ text {
     width: 50%;
     margin: auto;
   }
-
   .main-wrapper-about-area1 img {
     margin-left: 0px;
   }
@@ -697,6 +665,9 @@ text {
     flex-direction: row;
   }
 
+  .main-wrapper-index-area1 {
+    min-height: 100vh;
+  }
   .main-wrapper-index-area2 {
     display: flex;
     flex-direction: column;
@@ -758,11 +729,11 @@ text {
   }
 
   .main-wrapper-index-area1 #puzzel_1 {
-    /* display: block; */
-    width: 30vw;
+    display: block;
+    width: 50vmin;
     /* margin: 20% auto auto 10%; */
-    top: 7vw;
-    left: 2vw;
+    top: 27vmin;
+    left: 22vmin;
     transform: rotate(15deg);
     position: absolute;
     z-index: 0;
@@ -771,22 +742,22 @@ text {
 
   .main-wrapper-index-area1 #puzzel_1a,
   .main-wrapper-index-area1 #puzzel_1c {
-    display: none;
-    width: 32.3vw;
+    /* display: block; */
+    width: 54.1vmin;
     /* margin: 20% auto auto 10%; */
-    top: 7.1vw;
-    left: 1vw;
+    top: 27vmin;
+    left: 20vmin;
     transform: rotate(15deg);
     position: absolute;
     z-index: 0;
   }
   .main-wrapper-index-area1 #puzzel_1b {
-    display: none;
-    width: 16vw;
+    /* display: block; */
+    width: 27vmin;
     /* margin: 20% auto auto 10%; */
-    top: 16.2vw;
-    left: 6.1vw;
-
+    top: 42.1vmin;
+    left: 28.9vmin;
+    /* opacity: 0.2; */
     transform: rotate(15deg);
     position: absolute;
     z-index: 0;
@@ -794,11 +765,14 @@ text {
 
   .main-wrapper-index-area1 #puzzel_2 {
     /* display: block; */
-    width: 16.1vw;
+    width: 28.1vmin;
     position: absolute;
     z-index: 1;
-    top: 26vw;
-    left: 17vw;
+    top: 55vmin;
+    left: 47vmin;
+    /* top: 55.1vmin;
+    left: 43vmin;
+    transform: rotate(15deg); */
   }
 
   /* .main-wrapper-index-area1 #puzzel_2:hover {
@@ -817,14 +791,13 @@ text {
 
   @keyframes animation1 {
     from {
-      top: 32vw;
-      left: 21vw;
+      top: 52vmin;
+      left: 21vmin;
     }
     to {
+      top: 55.1vmin;
+      left: 43vmin;
       transform: rotate(15deg);
-
-      top: 23.85vw;
-      left: 14.66vw;
     }
   }
 
@@ -844,8 +817,8 @@ text {
 
   @keyframes animation2 {
     from {
-      top: 16.2vw;
-      left: 6.1vw;
+      top: 42.1vmin;
+      left: 28.9vmin;
     }
     to {
       /* transform: rotate(15deg); */
@@ -917,7 +890,7 @@ text {
   .wrapper-contact {
     display: flex;
     flex-direction: row;
-    width: 80vw;
+    width: 70vw;
     height: 100vh;
     margin: auto;
     scroll-snap-type: y mandatory;
@@ -972,15 +945,20 @@ text {
     align-items: flex-end;
   }
   .wrapper-contact-area2 {
+    margin: 10% auto;
+
     width: 50%;
   }
   /*------------------------ project desktop----------------------------- */
 
-  #projectSection {
+  .projectSection {
+    height: 100vh;
+    background: #e7e9ea;
+    padding: 10vh 0px;
+  }
+  .projectSectionWP {
     width: 70vw;
-    height: 65vh;
     margin: auto;
-    margin-top: 20vh;
     background-color: white;
     display: flex;
     justify-content: space-around;
@@ -990,37 +968,69 @@ text {
   .closeModal {
     margin: auto 3% 3% auto;
     display: block;
+    width: 30px;
+    height: 30px;
+    background-color: #022b3a;
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    /* font-family: "BrandonGrotesque-Regular"; */
   }
-  .projectSection-area0 {
+  .closeModal:hover {
+    background: #e7e9ea;
+    color: #022b3a;
+  }
+  .openProject {
+    background-color: #022b3a;
+    margin: 20px 0 0px auto;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    align-self: flex-end;
+  }
+  .projectSectionWP-area0 {
     width: 100%;
   }
-  .projectSection-area1 {
+  .projectSectionWP-area1 {
     width: 45%;
-    height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: auto;
   }
 
-  .projectSection-area1 button {
+  .projectSectionWP-area1 button {
     display: block;
     width: 50%;
-    margin: auto;
-    margin-right: 0px;
-    margin-bottom: 0px;
   }
-
-  .projectSection-area2 {
+  .projectSectionWP-area1 p,
+  .projectSectionWP-area1 h1 {
+    margin: 0px;
+  }
+  .projectSectionWP-area2 {
     width: 45%;
-    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
-  .projectSection > * {
+  .projectSectionWP > * {
     box-sizing: border-box;
   }
 
-  .projectSection img {
-    vertical-align: middle;
+  .projectSectionWP img {
+    /* vertical-align: middle; */
+    display: block;
+    border: 1px solid #e7e9ea;
   }
 
   /* Position the image container (needed to position the left and right arrows) */
@@ -1034,7 +1044,7 @@ text {
   }
 
   /* Add a pointer when hovering over the thumbnail images */
-  .projectSection .cursor {
+  .projectSectionWP .cursor {
     cursor: pointer;
   }
 
@@ -1101,8 +1111,14 @@ text {
     opacity: 0.6;
   }
 
-  .projectSection .active,
-  .projectSection .demo:hover {
+  .projectSectionWP .active,
+  .projectSectionWP .demo:hover {
     opacity: 1;
   }
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
 }
