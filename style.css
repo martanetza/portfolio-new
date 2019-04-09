@@ -33,7 +33,7 @@ body {
   font-family: "open sans";
   overflow-x: hidden;
   /* overflow-y: hidden; */
- }
+}
 
 /*------------------------ header ----------------------------- */
 
@@ -257,8 +257,8 @@ main {
   margin-top: 0%;
 }
 
-.main-wrapper-index-area2 h1{
-  font-family: "BrandonGrotesque-Regular"
+.main-wrapper-index-area2 h1 {
+  font-family: "BrandonGrotesque-Regular";
 }
 .main-wrapper-index-area1 #puzzel_1 {
   display: block;
@@ -346,45 +346,7 @@ main {
 }
 
 .cloud {
-  width: 50px;
-  position: absolute;
-  z-index: 10;
-  top: 40vw;
-  left: 0vw;
-  animation: cloudMoving 50s linear infinite;
-}
-#cloud-2 {
-  top: 20vw;
-  animation-duration: 50s;
-}
-#cloud-3 {
-  animation: cloudMoving 10s linear forwards;
-  top: 30vw;
-  left: 70vw;
-}
-@keyframes cloudMoving {
-  /* from {
-    left: 0vw;
-  } */
-  to {
-    left: 100vw;
-  }
-}
-@keyframes cloudMoving2 {
-  0% {
-    left: 60vw;
-  }
-  50% {
-    left: 100vw;
-  }
-  70% {
-    display: none;
-    left: 0vw;
-  }
-  100% {
-    display: block;
-    left: 60vw;
-  }
+  display: none;
 }
 /*----------------------- portfolio ------------------------- */
 .portfolioSection {
@@ -692,7 +654,7 @@ textarea::placeholder {
 .projectSectionWP-area1 button {
   display: block;
   width: 50%;
- }
+}
 .projectSectionWP-area1 p,
 .projectSectionWP-area1 h1 {
   margin: 0px;
@@ -796,14 +758,13 @@ textarea::placeholder {
 .projectSectionWP .demo:hover {
   opacity: 1;
 }
-}
+
 .hide {
-display: none;
+  display: none;
 }
 .show {
-display: block;
+  display: block;
 }
-
 
 /* ---------------------------------------------------------DESKTOP-------------------------------------------------------------- */
 @media all and (min-width: 991px) {
@@ -932,13 +893,13 @@ display: block;
     color: white;
     text-align: left;
   }
-  
-  .main-wrapper-index-area2 h1{
+
+  .main-wrapper-index-area2 h1 {
     font-size: 3em;
-    font-family: "BrandonGrotesque-Regular"
+    font-family: "BrandonGrotesque-Regular";
   }
 
-  .main-wrapper-index-area2 p{
+  .main-wrapper-index-area2 p {
     font-size: 1em;
   }
   .cloud {
@@ -1271,7 +1232,6 @@ display: block;
     justify-content: space-between;
     height: auto;
     padding: 0px;
-
   }
 
   .projectSectionWP-area1 button {
