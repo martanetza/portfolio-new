@@ -32,7 +32,8 @@ body {
   background-color: #f5f6f7;
   font-family: "open sans";
   overflow-x: hidden;
-}
+  /* overflow-y: hidden; */
+ }
 
 /*------------------------ header ----------------------------- */
 
@@ -256,6 +257,9 @@ main {
   margin-top: 0%;
 }
 
+.main-wrapper-index-area2 h1{
+  font-family: "BrandonGrotesque-Regular"
+}
 .main-wrapper-index-area1 #puzzel_1 {
   display: block;
   width: 50vmin;
@@ -338,6 +342,48 @@ main {
     /* transform: rotate(15deg); */
     top: -310px;
     left: 885px;
+  }
+}
+
+.cloud {
+  width: 50px;
+  position: absolute;
+  z-index: 10;
+  top: 40vw;
+  left: 0vw;
+  animation: cloudMoving 50s linear infinite;
+}
+#cloud-2 {
+  top: 20vw;
+  animation-duration: 50s;
+}
+#cloud-3 {
+  animation: cloudMoving 10s linear forwards;
+  top: 30vw;
+  left: 70vw;
+}
+@keyframes cloudMoving {
+  /* from {
+    left: 0vw;
+  } */
+  to {
+    left: 100vw;
+  }
+}
+@keyframes cloudMoving2 {
+  0% {
+    left: 60vw;
+  }
+  50% {
+    left: 100vw;
+  }
+  70% {
+    display: none;
+    left: 0vw;
+  }
+  100% {
+    display: block;
+    left: 60vw;
   }
 }
 /*----------------------- portfolio ------------------------- */
@@ -582,6 +628,183 @@ textarea::placeholder {
   }
 }
 
+/*------------------------ project ----------------------------- */
+
+.projectSection {
+  /* height: 100vh; */
+  background: #e7e9ea;
+  padding: 10vh 0px;
+}
+.projectSectionWP {
+  width: 90vw;
+  margin: auto;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 30px 0px;
+}
+.closeModal {
+  margin: auto 3% 3% auto;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #022b3a;
+  border: none;
+  border-radius: 50px;
+  color: white;
+  padding: 0px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  /* font-family: "BrandonGrotesque-Regular"; */
+}
+.closeModal:hover {
+  background: #e7e9ea;
+  color: #022b3a;
+}
+.openProject {
+  background-color: #022b3a;
+  margin: 20px 0 0px auto;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  padding: 5px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  align-self: flex-end;
+}
+.projectSectionWP-area0 {
+  width: 100%;
+}
+.projectSectionWP-area1 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  padding: 14px;
+}
+
+.projectSectionWP-area1 button {
+  display: block;
+  width: 50%;
+ }
+.projectSectionWP-area1 p,
+.projectSectionWP-area1 h1 {
+  margin: 0px;
+}
+.projectSectionWP-area2 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.projectSectionWP > * {
+  box-sizing: border-box;
+}
+
+.projectSectionWP img {
+  /* vertical-align: middle; */
+  display: block;
+  border: 1px solid #e7e9ea;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.projectSectionWP .cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 33.33%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.projectSectionWP .active,
+.projectSectionWP .demo:hover {
+  opacity: 1;
+}
+}
+.hide {
+display: none;
+}
+.show {
+display: block;
+}
+
+
 /* ---------------------------------------------------------DESKTOP-------------------------------------------------------------- */
 @media all and (min-width: 991px) {
   .aboutSection,
@@ -707,6 +930,16 @@ textarea::placeholder {
     margin: 50px;
     font-size: 22px;
     color: white;
+    text-align: left;
+  }
+  
+  .main-wrapper-index-area2 h1{
+    font-size: 3em;
+    font-family: "BrandonGrotesque-Regular"
+  }
+
+  .main-wrapper-index-area2 p{
+    font-size: 1em;
   }
   .cloud {
     width: 100px;
@@ -716,7 +949,6 @@ textarea::placeholder {
     left: 0vw;
     animation: cloudMoving 50s linear infinite;
   }
-
   #cloud-2 {
     top: 20vw;
     animation-duration: 150s;
@@ -763,7 +995,7 @@ textarea::placeholder {
     display: block;
     width: 50vmin;
     /* margin: 20% auto auto 10%; */
-    top: 27vmin;
+    top: 20vmin;
     left: 22vmin;
     transform: rotate(15deg);
     position: absolute;
@@ -776,7 +1008,7 @@ textarea::placeholder {
     /* display: block; */
     width: 54.1vmin;
     /* margin: 20% auto auto 10%; */
-    top: 27vmin;
+    top: 20vmin;
     left: 20vmin;
     transform: rotate(15deg);
     position: absolute;
@@ -786,7 +1018,7 @@ textarea::placeholder {
     /* display: block; */
     width: 27vmin;
     /* margin: 20% auto auto 10%; */
-    top: 42.1vmin;
+    top: 35.1vmin;
     left: 28.9vmin;
     /* opacity: 0.2; */
     transform: rotate(15deg);
@@ -799,7 +1031,7 @@ textarea::placeholder {
     width: 28.1vmin;
     position: absolute;
     z-index: 1;
-    top: 55vmin;
+    top: 48vmin;
     left: 47vmin;
     /* top: 55.1vmin;
     left: 43vmin;
@@ -822,11 +1054,11 @@ textarea::placeholder {
 
   @keyframes animation1 {
     from {
-      top: 52vmin;
+      top: 45vmin;
       left: 21vmin;
     }
     to {
-      top: 55.1vmin;
+      top: 48.1vmin;
       left: 43vmin;
       transform: rotate(15deg);
     }
@@ -848,13 +1080,13 @@ textarea::placeholder {
 
   @keyframes animation2 {
     from {
-      top: 42.1vmin;
+      top: 35.1vmin;
       left: 28.9vmin;
     }
     to {
       /* transform: rotate(15deg); */
       top: -310px;
-      left: 885px;
+      left: 1000px;
     }
   }
   /*------------------------ desktop portfolio----------------------------- */
@@ -992,6 +1224,7 @@ textarea::placeholder {
     margin: auto;
     background-color: white;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 30px 0px;
@@ -1037,6 +1270,8 @@ textarea::placeholder {
     flex-direction: column;
     justify-content: space-between;
     height: auto;
+    padding: 0px;
+
   }
 
   .projectSectionWP-area1 button {
