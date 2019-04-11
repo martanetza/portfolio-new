@@ -486,7 +486,8 @@ input {
   display: block;
   width: 100%;
   margin: 30px auto;
-  height: 40px;
+  height: auto;
+  padding: 10px 0;
   background: #022b3a;
   border: none;
   color: white;
@@ -558,30 +559,6 @@ textarea::placeholder {
   display: block;
   width: 50%;
   margin: auto;
-}
-@media all and (min-width: 600px) {
-  .main-wrapper-index {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .main-wrapper-index h1 {
-    font-size: 1em;
-  }
-
-  .main-wrapper-index-area2 {
-    width: 50%;
-  }
-  .main-wrapper-index p {
-    font-size: 0.5em;
-  }
-
-  .boxPortfolio {
-    height: 100vh;
-  }
-  .portfolio-wrapper {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
 }
 
 /*------------------------ project ----------------------------- */
@@ -760,6 +737,126 @@ textarea::placeholder {
   display: block;
 }
 
+/* ---------------------------------------------------- mobile landscape-------------------------------------------------------------- */
+
+@media all and (min-width: 600px) {
+  .main-wrapper-index {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+  }
+
+  .main-wrapper-index h1 {
+    font-size: 1em;
+  }
+
+  .main-wrapper-index-area2 {
+    width: 50%;
+  }
+  .main-wrapper-index p {
+    font-size: 0.5em;
+  }
+
+  .boxPortfolio {
+    height: 50vw;
+  }
+  .portfolio-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+
+  .main-wrapper-index-area1 #puzzel_1 {
+    display: block;
+    width: 50vmin;
+    /* margin: 20% auto auto 10%; */
+    top: 10vmin;
+    left: 32vmin;
+    transform: rotate(15deg);
+    position: absolute;
+    z-index: 0;
+    /* opacity: 0.6; */
+  }
+
+  .main-wrapper-index-area1 #puzzel_1a,
+  .main-wrapper-index-area1 #puzzel_1c {
+    /* display: block; */
+    width: 54.1vmin;
+    /* margin: 20% auto auto 10%; */
+    top: 10vmin;
+    left: 30vmin;
+    transform: rotate(15deg);
+    position: absolute;
+    z-index: 0;
+  }
+  .main-wrapper-index-area1 #puzzel_1b {
+    /* display: block; */
+    width: 27vmin;
+    /* margin: 20% auto auto 10%; */
+    top: 25.1vmin;
+    left: 38.9vmin;
+    /* opacity: 0.2; */
+    transform: rotate(15deg);
+    position: absolute;
+    z-index: 0;
+  }
+
+  .main-wrapper-index-area1 #puzzel_2 {
+    /* display: block; */
+    width: 28.1vmin;
+    position: absolute;
+    z-index: 1;
+    top: 38vmin;
+    left: 57vmin;
+    /* top: 55.1vmin;
+  left: 43vmin;
+  transform: rotate(15deg); */
+  }
+
+  @keyframes animation1 {
+    from {
+      top: 35vmin;
+      left: 31vmin;
+    }
+    to {
+      top: 38.1vmin;
+      left: 53vmin;
+      transform: rotate(15deg);
+    }
+  }
+
+  .puzzleAnimate1 {
+    animation-name: animation1;
+    animation-duration: 0.5s;
+    animation-delay: -2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+  }
+
+  .puzzleAnimate2 {
+    animation-name: animation2;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes animation2 {
+    from {
+      top: 25.1vmin;
+      left: 38.9vmin;
+    }
+    to {
+      /* transform: rotate(15deg); */
+      top: -310px;
+      left: 1000px;
+    }
+  }
+  .main-wrapper-index-area2 h1 {
+    font-size: 2em;
+    font-family: "BrandonGrotesque-Regular";
+  }
+
+  .main-wrapper-index-area2 p {
+    font-size: 0.7em;
+  }
+}
 /* ---------------------------------------------------------DESKTOP-------------------------------------------------------------- */
 @media all and (min-width: 991px) {
   .aboutSection,
@@ -997,20 +1094,6 @@ textarea::placeholder {
     left: 43vmin;
     transform: rotate(15deg); */
   }
-
-  /* .main-wrapper-index-area1 #puzzel_2:hover {
-  transform: rotate(15deg);
-  top: 322px;
-  left: 210px;
-} */
-  /* 
-.main-wrapper-index-area1 #puzzel_2:hover {
-  animation-name: animation1;
-  animation-duration: 0.5s;
-  animation-delay: -2s;
-  animation-timing-function: ease-in;
-  animation-fill-mode: forwards;
-} */
 
   @keyframes animation1 {
     from {
