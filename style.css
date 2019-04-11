@@ -409,13 +409,15 @@ main {
 }
 /*----------------------- contact ------------------------- */
 .contactSection {
+  scroll-snap-type: y mandatory;
+
   background: #235789;
   color: white;
 }
 
 .wrapper-contact {
   display: grid;
-  grid-template-rows: 1fr 2fr;
+  grid-template-rows: 2fr 3fr;
   grid-template-areas: "area1" "area2";
   width: 80vw;
   margin: auto;
@@ -442,28 +444,36 @@ main {
 }
 
 .contactDetails img {
-  /* display: inline-block; */
-  width: auto;
-  height: 25px;
-  margin: 2vw 2vw 0 0;
-  display: flex;
-  padding-top: 0;
+  display: block;
+  vertical-align: baseline;
+  height: 50%;
 }
 .contactDetails h3 {
-  display: flex;
+  display: block;
   /* align-self: center; */
   text-decoration: none;
   font-weight: 400;
+  margin: 0px auto 0px 20px;
 }
 .contactDetails a {
   text-decoration: none;
   color: black;
   width: auto;
 }
-
-.contactDetails div {
-  display: flex;
+.contBox div {
+  height: 100%;
+  width: 50px;
 }
+
+.contactDetails .contBox {
+  display: flex;
+  height: 50px;
+  flex-direction: row;
+  align-content: center;
+  /* justify-content: space-between; */
+  margin: 10px 0px;
+}
+
 .contactDetails {
   display: flex;
   flex-direction: column;
@@ -484,8 +494,7 @@ input {
   display: block;
   width: 100%;
   margin: 30px auto;
-  height: 65px;
-  /* padding: 10px 0; */
+  height: 40px;
   background: #022b3a;
   border: none;
   color: white;
@@ -500,8 +509,8 @@ textarea {
 input::placeholder,
 textarea::placeholder {
   color: white;
-  /* font-size: 1.2em; */
-  /* padding: 5px; */
+  font-size: 1.2em;
+  padding: 5px;
 }
 /*------------------------ about ---------------------------- */
 .aboutSection {
@@ -1190,31 +1199,35 @@ textarea::placeholder {
     font-size: 1em;
   }
   /*------------------------ contact desktop----------------------------- */
-
+  .contactSection {
+    padding-top: 20vh;
+    height: 80vh;
+  }
   .wrapper-contact {
     display: flex;
     flex-direction: row;
     width: 70vw;
-    height: 100vh;
     margin: auto;
     scroll-snap-type: y mandatory;
   }
 
   .wrapper-contact img {
     display: block;
-    width: 80%;
+    /* width: 80%; */
     padding-top: 0;
     margin: 30% auto;
   }
 
   .wrapper-contact h1 {
     text-align: left;
+    margin: 0px;
   }
   .wrapper-contact-area1 {
-    margin: 10% auto;
+    margin: 0px;
     width: 50%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
   }
 
   .someLinks img {
@@ -1224,20 +1237,43 @@ textarea::placeholder {
   }
 
   .contactDetails img {
-    /* display: inline-block; */
-    width: auto;
-    height: 40px;
-    padding-top: 0;
-    margin: 2vw 2vw 2vw 0;
+    display: block;
+    vertical-align: baseline;
+    margin: 0px;
   }
   .contactDetails h3 {
     display: block;
-    align-self: center;
+    /* align-self: center; */
+    text-decoration: none;
+    font-weight: 400;
+    margin: 0px auto 0px 20px;
+  }
+  .contactDetails a {
+    text-decoration: none;
+    color: black;
+    width: auto;
+  }
+  .contBox div {
+    height: 100%;
+    width: 50px;
+  }
+
+  .contactDetails .contBox {
+    display: flex;
+    height: 50px;
+    flex-direction: row;
+    align-content: center;
+    /* justify-content: space-between; */
+    margin: 10px 0px;
   }
 
   .contactDetails {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* align-content: center; */
   }
+
   .someLinks {
     display: flex;
     flex-direction: row;
@@ -1249,9 +1285,32 @@ textarea::placeholder {
     align-items: flex-end;
   }
   .wrapper-contact-area2 {
-    margin: 10% auto;
+    margin: 0px;
 
     width: 50%;
+  }
+
+  input {
+    display: block;
+    width: 100%;
+    margin: 0px auto 30px auto;
+    height: 40px;
+    background: #022b3a;
+    border: none;
+    color: white;
+  }
+  textarea {
+    max-width: 100%;
+    min-width: 100%;
+    background: #022b3a;
+    height: 50%;
+    border: none;
+  }
+  input::placeholder,
+  textarea::placeholder {
+    color: white;
+    font-size: 1.2em;
+    padding: 5px;
   }
   /*------------------------ project desktop----------------------------- */
 
