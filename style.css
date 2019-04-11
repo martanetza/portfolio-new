@@ -419,7 +419,7 @@ main {
   display: grid;
   grid-template-rows: 2fr 3fr;
   grid-template-areas: "area1" "area2";
-  width: 80vw;
+  width: 90vw;
   margin: auto;
   scroll-snap-type: y mandatory;
 }
@@ -498,9 +498,10 @@ input {
   background: #022b3a;
   border: none;
   color: white;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 textarea {
+  font-size: 1em;
   max-width: 100%;
   min-width: 100%;
   background: #022b3a;
