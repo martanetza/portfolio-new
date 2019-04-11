@@ -409,15 +409,13 @@ main {
 }
 /*----------------------- contact ------------------------- */
 .contactSection {
-  scroll-snap-type: y mandatory;
-
   background: #235789;
   color: white;
 }
 
 .wrapper-contact {
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 2fr;
   grid-template-areas: "area1" "area2";
   width: 80vw;
   margin: auto;
