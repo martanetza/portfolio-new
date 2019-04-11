@@ -486,7 +486,7 @@ input {
   display: block;
   width: 100%;
   margin: 30px auto;
-  height: auto;
+  height: 1.5em;
   padding: 10px 0;
   background: #022b3a;
   border: none;
@@ -503,7 +503,7 @@ input::placeholder,
 textarea::placeholder {
   color: white;
   font-size: 1.2em;
-  /* padding: 5px; */
+  padding: 5px;
 }
 /*------------------------ about ---------------------------- */
 .aboutSection {
