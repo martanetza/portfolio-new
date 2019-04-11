@@ -567,7 +567,22 @@ textarea::placeholder {
   width: 50%;
   margin: auto;
 }
-
+.cv-button div {
+  height: 60%;
+}
+.cv-button img {
+  height: 40px;
+}
+.cv-button {
+  border-radius: 50px;
+  background: #022b3a;
+  height: 60px;
+  display: flex;
+  width: 30vmin;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px auto;
+}
 /*------------------------ project ----------------------------- */
 
 .projectSection {
