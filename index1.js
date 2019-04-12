@@ -170,3 +170,35 @@ document.querySelector("#nav-icon3").addEventListener("click", () => {
 });
 
 console.log(document.querySelector("#puzzel_1").offsetHeight);
+
+// message post data
+
+document.querySelector(".send-button").addEventListener("click", createData);
+
+const form = document.querySelector("form");
+console.log(form.elements);
+
+function createData() {
+  event.preventDefault();
+  const data = {
+    name: form.elements.name.value,
+    email: form.elements.email.value,
+    message: form.elements.message.value
+  };
+  console.log(data);
+  post(data);
+}
+
+function post(data) {
+  const postData = JSON.stringify(data);
+
+  fetch("https://cartoon-0a3f.restdb.io/rest/portfoliomessage", {
+    method: "post",
+    headers: {
+      "Content-Type": "application/json; charset=utf-8",
+      "x-apikey": "5c7cee44cac6621685acbae4",
+      "cache-control": "no-cache"
+    },
+    body: postData
+  }).then(res => res.json());
+}

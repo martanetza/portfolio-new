@@ -398,6 +398,16 @@ main {
   align-self: flex-end;
 }
 
+.boxPortfolio button:hover {
+  background: #e7e9ea;
+  color: #022b3a;
+}
+
+.boxPortfolio button:hover a {
+  background: #e7e9ea;
+  color: #022b3a;
+}
+
 .portfolio-wrapper img {
   display: block;
   width: 95%;
@@ -490,9 +500,15 @@ main {
   width: 100%;
 }
 
+form {
+  height: 100%;
+}
+
 input {
+  padding-left: 12px;
+
   box-sizing: border-box;
-  border-radius: 2px;
+  border-radius: 10px;
   outline: none;
   display: block;
   width: 100%;
@@ -504,18 +520,43 @@ input {
   font-size: 1em;
 }
 textarea {
+  font-family: "Open Sans";
+  padding-left: 12px;
   font-size: 1em;
-  max-width: 100%;
-  min-width: 100%;
+  border-radius: 10px;
+  color: white;
+  max-width: 96%;
+  min-width: 96%;
   background: #022b3a;
-  height: 50%;
+  height: 20%;
   border: none;
 }
 input::placeholder,
 textarea::placeholder {
   color: white;
+  font-size: 1em;
+  font-family: "Open Sans";
+}
+[attribute="value"],
+textarea::placeholder {
   padding: 5px;
 }
+
+.send-button {
+  background-color: white;
+  border-radius: 30px;
+  border: none;
+  color: #231f20;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  display: block;
+  margin: 30px 0 0 auto;
+  cursor: pointer;
+}
+
 /*------------------------ about ---------------------------- */
 .aboutSection {
   background: #f5f6f7;
@@ -587,6 +628,43 @@ textarea::placeholder {
   align-items: center;
   margin: 50px auto;
 }
+
+.cv-button:hover {
+  background: #e7e9ea;
+}
+.cv-button:hover p {
+  color: #231f20;
+}
+.cv-button:hover .cls-2,
+.cv-button:hover .cls-3,
+.cv-button:hover .cls-4 {
+  fill: #231f20;
+  stroke: #231f20;
+}
+
+svg {
+  height: 100%;
+}
+.cls-1 {
+  fill: #231f20;
+}
+.cls-2 {
+  fill: white;
+  stroke-width: 3px;
+}
+.cls-2,
+.cls-4 {
+  stroke: white;
+  stroke-miterlimit: 10;
+}
+.cls-3,
+.cls-4 {
+  fill: white;
+}
+.cls-4 {
+  stroke-width: 2px;
+}
+
 /*------------------------ project ----------------------------- */
 
 .projectSection {
@@ -636,6 +714,12 @@ textarea::placeholder {
   font-size: 14px;
   align-self: flex-end;
 }
+
+.openProject:hover {
+  background: #e7e9ea;
+  color: #231f20;
+}
+
 .projectSectionWP-area0 {
   width: 100%;
 }
@@ -678,17 +762,14 @@ textarea::placeholder {
   position: relative;
 }
 
-/* Hide the images by default */
 .mySlides {
   display: none;
 }
 
-/* Add a pointer when hovering over the thumbnail images */
 .projectSectionWP .cursor {
   cursor: pointer;
 }
 
-/* Next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -697,7 +778,7 @@ textarea::placeholder {
   width: auto;
   padding: 16px;
   margin-top: -50px;
-  color: white;
+  color: #e7e9ea;
   font-weight: bold;
   font-size: 20px;
   border-radius: 0 3px 3px 0;
@@ -711,13 +792,11 @@ textarea::placeholder {
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Number text (1/3 etc) */
 .numbertext {
   color: #f2f2f2;
   font-size: 12px;
@@ -726,7 +805,6 @@ textarea::placeholder {
   top: 0;
 }
 
-/* Container for image text */
 .caption-container {
   text-align: center;
   background-color: #222;
@@ -740,13 +818,11 @@ textarea::placeholder {
   clear: both;
 }
 
-/* Six columns side by side */
 .column {
   float: left;
   width: 33.33%;
 }
 
-/* Add a transparency effect for thumnbail images */
 .demo {
   opacity: 0.6;
 }
@@ -1242,6 +1318,7 @@ textarea::placeholder {
     display: flex;
     flex-direction: row;
     width: 70vw;
+    height: 65vh;
     margin: auto;
     scroll-snap-type: y mandatory;
   }
@@ -1268,7 +1345,7 @@ textarea::placeholder {
   .someLinks img {
     display: inline-block;
     width: 50px;
-    margin: 2vw 2vw 2vw 0;
+    margin: auto 2vw 0 0;
   }
 
   .contactDetails img {
@@ -1335,10 +1412,11 @@ textarea::placeholder {
     color: white;
   }
   textarea {
-    max-width: 100%;
-    min-width: 100%;
+    max-width: 96%;
+    min-width: 96%;
     background: #022b3a;
-    height: 50%;
+    height: 40%;
+    max-height: 50%;
     border: none;
   }
   input::placeholder,
@@ -1346,6 +1424,11 @@ textarea::placeholder {
     color: white;
     font-size: 1.2em;
     padding: 5px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
   /*------------------------ project desktop----------------------------- */
 
@@ -1428,27 +1511,22 @@ textarea::placeholder {
   }
 
   .projectSectionWP img {
-    /* vertical-align: middle; */
     display: block;
     border: 1px solid #e7e9ea;
   }
 
-  /* Position the image container (needed to position the left and right arrows) */
   .container {
     position: relative;
   }
 
-  /* Hide the images by default */
   .mySlides {
     display: none;
   }
 
-  /* Add a pointer when hovering over the thumbnail images */
   .projectSectionWP .cursor {
     cursor: pointer;
   }
 
-  /* Next & previous buttons */
   .prev,
   .next {
     cursor: pointer;
@@ -1457,7 +1535,7 @@ textarea::placeholder {
     width: auto;
     padding: 16px;
     margin-top: -50px;
-    color: white;
+    color: #e7e9ea;
     font-weight: bold;
     font-size: 20px;
     border-radius: 0 3px 3px 0;
@@ -1465,19 +1543,16 @@ textarea::placeholder {
     -webkit-user-select: none;
   }
 
-  /* Position the "next button" to the right */
   .next {
     right: 0;
     border-radius: 3px 0 0 3px;
   }
 
-  /* On hover, add a black background color with a little bit see-through */
   .prev:hover,
   .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
   }
 
-  /* Number text (1/3 etc) */
   .numbertext {
     color: #f2f2f2;
     font-size: 12px;
@@ -1486,7 +1561,6 @@ textarea::placeholder {
     top: 0;
   }
 
-  /* Container for image text */
   .caption-container {
     text-align: center;
     background-color: #222;
@@ -1500,13 +1574,11 @@ textarea::placeholder {
     clear: both;
   }
 
-  /* Six columns side by side */
   .column {
     float: left;
     width: 33.33%;
   }
 
-  /* Add a transparency effect for thumnbail images */
   .demo {
     opacity: 0.6;
   }
