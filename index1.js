@@ -173,20 +173,30 @@ console.log(document.querySelector("#puzzel_1").offsetHeight);
 
 // message post data
 
-document.querySelector(".send-button").addEventListener("click", createData);
+// document.querySelector(".send-button").addEventListener("click", createData);
+document
+  .querySelector("input[type='submit']")
+  .addEventListener("click", createData);
 
 const form = document.querySelector("form");
 console.log(form.elements);
 
 function createData() {
   event.preventDefault();
-  const data = {
-    name: form.elements.name.value,
-    email: form.elements.email.value,
-    message: form.elements.message.value
-  };
-  console.log(data);
-  post(data);
+
+  if (!form.elements.email.value || !form.elements.email.checkValidity()) {
+    document.querySelector("form span").textContent =
+      "Please enter your valid email address ";
+  } else {
+    document.querySelector("form span").textContent = " ";
+    const data = {
+      name: form.elements.name.value,
+      email: form.elements.email.value,
+      message: form.elements.message.value
+    };
+    console.log(data);
+    post(data);
+  }
 }
 
 function post(data) {
@@ -201,4 +211,9 @@ function post(data) {
     },
     body: postData
   }).then(res => res.json());
+  document.querySelector(".send-button").style.display = "none";
+  document.querySelector(".confirm").style.display = "block";
+  document.querySelectorAll("input:not([type=submit]), textarea").forEach(e => {
+    e.value = "";
+  });
 }

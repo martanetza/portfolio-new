@@ -357,13 +357,26 @@
             <!-- <img src="img/contact.png" alt="contact" /> -->
             <form action="send message">
               <input type="text" id="name" name="name" placeholder="Name" />
-              <input type="text" id="email" name="email" placeholder="Email" />
+              <div>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  placeholder="Email"
+                />
+                <span></span>
+              </div>
               <textarea
                 id="message"
                 name="message"
                 placeholder="Message"
               ></textarea>
-              <button class="send-button">send</button>
+              <!-- <button class="send-button">send</button> -->
+              <input class="send-button" type="submit" value="send" />
+              <p class="confirm hide">
+                Thank you ! Your message has been sent !
+              </p>
             </form>
           </div>
         </div>
